@@ -1,0 +1,99 @@
+
+
+<h1 id="h1">Hello world</h1>
+<button onclick="change()">Change</button>
+
+<script>
+    var h1=document.getElementById("h1")
+    console.log(h1.textContent)
+    function change()
+    {
+        h1.textContent="Bye world"
+    }
+    
+</script>
+
+<input type="number" id="num1" value="0">
+<input  type="number" id="num2" value="1">
+<button onclick="add()">Add</button>
+<p id="result">result</p>
+<script>
+    var num1=document.getElementById("num1")
+    var num2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    function add(){
+        var sum=Number(num1.value)+Number(num2.value);
+        result.textContent=sum;
+    
+    }
+</script>
+
+<h1>Guess the Number from 1 to 10</h1>
+<input type="number" id="guess">
+<button onclick="check()">Check</button>
+<p id="msg">Message</p>
+<p id="score">Score</p>
+
+<script>
+    var guessn=document.getElementById("guess")
+    var msgg=document.getElementById("msg")
+    var scores=document.getElementById("score")
+    var random=Math.floor(Math.random()*10+1)
+    var tscore=10;
+    function check(){
+        var ele=guessn.value
+        if(ele==random){
+            console.log("You are correct")
+            msgg.textContent="Your are correct!!!"
+            alert("You Win")
+            scores.textContent="score:"+tscore;
+
+        }else{
+            tscore=tscore-1;
+            scores.textContent="score:"+tscore;
+            msgg.textContent="Your are wrong!!!"
+        }
+    }
+</script>
+
+
+
+<style>
+    div{
+        background-color:blue;
+        width:100px;
+        height:100px;
+    }
+</style>
+
+
+<div id="box"></div>
+<button onclick="changecolor()">Change color</button>
+<script>
+    var box=document.getElementById("box")
+    function changecolor(){
+        box.style.backgroundColor="red"
+    }
+</script>
+
+
+
+<input id="tbox">
+<button onclick="update()">Btn</button>
+<h1 id="res"></h1>
+<script>
+    var tbox=document.getElementById("tbox")
+    var res=document.getElementById("res")
+    function update(){
+        res.textContent=tbox.value;
+    }
+</script>
+
+<button onclick="update1()">Update</button>
+<div id="div1"></div>
+<script>
+    var divv=document.getElementById("div1");
+    function update1(){
+        divv.append("<h1>Hello</h1>")
+    }
+</script>

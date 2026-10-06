@@ -1,0 +1,28 @@
+<div class="one">
+    Hello
+</div>
+<script>
+    var div=document.querySelector(".one")
+    console.log(div)
+</script>
+
+<div class="ok">One</div>
+<div class="ok">Two</div>
+<div class="ok">Three</div>
+<script>
+    var divv=document.querySelectorAll(".ok")
+    console.log(divv[1])
+    console.log(divv)
+    //loop using this is like array
+    for(cnt=0;cnt<divv.length;cnt++){
+        console.log(divv[cnt])
+    }
+</script>
+
+<div1>
+    <h1>John</h1>
+</div1>
+<script>
+    var div1=document.querySelector("div1")
+    div1.prepend("Hello")
+</script>

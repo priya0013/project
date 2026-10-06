@@ -1,0 +1,38 @@
+h1{
+    color:blueviolet;
+    background-color:lightgreen;
+}
+p{
+    color:red;
+}
+.one{
+    background-color:lightcoral
+}
+
+.two{
+    background-color:lightblue;
+}
+/*All the text in document will be changed to green color and all the margin and padding will be removed from the document.*/
+
+/*{
+    margin:0;
+    padding:0;
+    color:green;
+}
+*/
+
+/*
+CSS BOX Model
+   -The css box model is essentially a box that wraps around every HTML element.
+   1-Margins
+   2-Borders
+   3-Padding
+   4-Content
+   */
+
+   /*DISPLAY PROPERTY
+   -INLINE-Same line,full the size of the content, cannot set width and height
+   -INLINE BLOCK-Same line ,fill the size of the content we can set width and height
+   -BLOCK-Different Line, fill the size of entire width we can set height and width
+   -NONE-this will hide the element from the html
+   */
