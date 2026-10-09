@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student form</title>
+    
+
+<style>
+    table{
+        border:2px;
+        border-style:solid;
+        border-color:black;
+        text-align:center;
+    }
+    td{
+        padding:5px;
+        border:1px solid black;
+    }
+    th{
+        padding:5px;
+        border:1px solid black;
+    }
+
+    button{
+        background-color:rgb(91, 213, 247);
+        color:black;
+        border:1px solid black;
+        width:100px;
+
+    }
+</style>
+</head>
+<body>
+<center>
+<h1>STUDENT FORM</h1>
+
+<form id="studentForm">
+    <table>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" id="name" placeholder="your name"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age</label></td>
+            <td><input type="number" id="age" placeholder="your age"></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender</label></td>
+            <td><input type="radio" name="gender" value="male" checked>Male
+                <input type="radio" name="gender" value="female" checked>Female</td>
+        </tr>
+        <tr>
+            <td><label for="course">Course</label></td>
+            <td><input type="text" id="course" placeholder="your course"></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-mail</label></td>
+            <td><input type="email" id="email" placeholder="your email"></td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <button type="button" onclick="addsubmit()">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    
+</form>
+<table id="studenttable">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>E-mail</th>
+        <th>Action</th>
+    </tr>
+</table>
+</center>
+
+<script>
+    function addsubmit(){
+        var name=document.getElementById("name").value;
+        var age=document.getElementById("age").value;
+        var course=document.getElementById("course").value;
+        var email=document.getElementById("email").value;
+        var gender=document.querySelector(
+            'input[name="gender"]:checked'
+        ).value;
+        var table=document.getElementById("studenttable");
+        var row=table.insertRow();
+        var data=[name,age,gender,course,email];
+        for(var i=0;i<5;i++){
+            row.insertCell(i).innerHTML=data[i];
+        }
+        var cell=row.insertCell(5);
+        cell.innerHTML="<button class='delete'>Delete</button>";
+        cell.querySelector("button").onclick=function(){
+            row.remove();
+        };
+    }
+</script>
